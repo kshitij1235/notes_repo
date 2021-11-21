@@ -1,0 +1,150 @@
+widgets in tkinker
+
+Label -	It is used to display text or image on the screen
+
+eg-
+     user_name = Label(top,  text = "Username").place(x = 40,  y = 60) 
+
+---------------------------------------------------------------------------------
+Button - It is used to add buttons to your application
+
+eg-
+     btn = Button(root, text = 'Click me !', bd = '5', command = root.destroy)  
+
+Canvas - It is used to draw pictures and others layouts like texts, graphics etc.
+
+Syntax--
+
+    C = Canvas(root, height, width, bd, bg, ..)
+
+Some common drawing methods--
+
+    Creating an Oval
+        oval = C.create_oval(x0, y0, x1, y1, options)
+    Creating an arc
+        arc = C.create_arc(20, 50, 190, 240, start=0, extent=110, fill="red")
+    Creating a Line
+        line = C.create_line(x0, y0, x1, y1, ..., xn, yn, options)
+    Creating a polygon
+        oval = C.create_polygon(x0, y0, x1, y1, ...xn, yn, options)
+
+
+---------------------------------------------------------------------------------
+ComboBox- It contains a down arrow to select from list of available options
+---------------------------------------------------------------------------------
+CheckButton- It displays a number of options to the user as toggle buttons from which user can select any number of options.
+
+syntax --
+
+       w = Checkbutton ( root, options)
+
+options --
+
+    activebackground: This option used to represent the background color when the checkbutton is under the cursor.
+    activeforeground: This option used to represent the foreground color when the checkbutton is under the cursor.
+    bg: This option used to represent the normal background color displayed behind the label and indicator.
+    bitmap: This option used to display a monochrome image on a button.
+    bd: This option used to represent the size of the border around the indicator and the default value is 2 pixels.
+    command: This option is associated with a function to be called when the state of the checkbutton is changed.
+    cursor: By using this option, the mouse cursor will change to that pattern when it is over the checkbutton.
+    disabledforeground: The foreground color used to render the text of a disabled checkbutton. The default is a stippled version of the default foreground color.
+    font: This option used to represent the font used for the text.
+    fg: This option used to represent the color used to render the text.
+    height: This option used to represent the number of lines of text on the checkbutton and it’s default value is 1.
+    highlightcolor: This option used to represent the color of the focus highlight when the checkbutton has the focus.
+    image: This option used to display a graphic image on the button.
+    justify: This option used to control how the text is justified: CENTER, LEFT, or RIGHT.
+    offvalue: The associated control variable is set to 0 by default if the button is unchecked. We can change the state of an unchecked variable to some other one.
+    onvalue: The associated control variable is set to 1 by default if the button is checked. We can change the state of the checked variable to some other one.
+    padx: This option used to represent how much space to leave to the left and right of the checkbutton and text. It’s default value is 1 pixel.
+    pady: This option used to represent how much space to leave above and below the checkbutton and text. It’s default value is 1 pixel.
+    relief: The type of the border of the checkbutton. It’s default value is set to FLAT.
+    selectcolor: This option used to represent the color of the checkbutton when it is set. The Default is selectcolor=”red”.
+    selectimage: The image is shown on the checkbutton when it is set.
+    state: It represents the state of the checkbutton. By default, it is set to normal. We can change it to DISABLED to make the checkbutton unresponsive. The state of the checkbutton is ACTIVE when it is under focus.
+    text: This option used use newlines (“\n”) to display multiple lines of text.
+    underline: This option used to represent the index of the character in the text which is to be underlined. The indexing starts with zero in the text.
+    variable: This option used to represents the associated variable that tracks the state of the checkbutton.
+    width: This option used to represents the width of the checkbutton. and also represented in the number of characters that are represented in the form of texts.
+    wraplength: This option will be broken text into the number of pieces       
+
+methods --
+
+    deselect(): This method is called to turn off the checkbutton.
+    flash(): The checkbutton is flashed between the active and normal colors.
+    invoke(): This method will invoke the method associated with the checkbutton.
+    select(): This method is called to turn on the checkbutton.
+    toggle(): This method is used to toggle between the different Checkbuttons
+
+eg -- 
+      Checkbutton1 = IntVar()   
+
+      Button1 = Checkbutton(root, text = "Tutorial",variable = Checkbutton1, onvalue = 1, offvalue = 0,  height = 2, width = 10) 
+
+     Button1.pack()   
+
+---------------------------------------------------------------------------------
+RadiButton-	It is used to implement one-of-many selection as it allows only one option to be selected
+---------------------------------------------------------------------------------
+Entry- It is used to input single line text entry from user
+
+eg- 
+     user_password_entry_area = Entry(top, width = 30).place(x = 110, y = 100) 
+
+---------------------------------------------------------------------------------
+Frame- It is used as container to hold and organize the widgets
+---------------------------------------------------------------------------------
+Message- It works same as that of label and refers to multi-line and non-editable text
+---------------------------------------------------------------------------------
+Scale- It is used to provide a graphical slider which allows to select any value from that scale
+---------------------------------------------------------------------------------
+Scrollbar- It is used to scroll down the contents. It provides a slide controller.
+---------------------------------------------------------------------------------
+SpinBox- It is allows user to select from given set of values
+---------------------------------------------------------------------------------
+Text- It allows user to edit multiline text and format the way it has to be displayed
+---------------------------------------------------------------------------------
+Menu- It is used to create all kinds of menu used by an application
+---------------------------------------------------------------------------------
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+options in tkinker
+
+///////////////////////////////////////////////////////////////////////////////////
+
+1)anchor: This options is used to contrli the positioning of the text if the widget has more space than required for the text. The default is anchor=CENTER, which centers the text in the available space.
+---------------------------------------------------------------------------------
+2)bg:This option is used to set the normal background clior displayed behind the label and indicator.
+---------------------------------------------------------------------------------
+3)height:This option is used to set the vertical dimension of the new frame.
+---------------------------------------------------------------------------------
+4)width:Width of the label in characters (not pixels!). If this option is not set, the label will be sized to fit its contents.
+---------------------------------------------------------------------------------
+5)bd:This option is used to set the size of the border around the indicator. Default bd value is set on 2 pixels.
+---------------------------------------------------------------------------------
+6)font:If you are displaying text in the label (with the text or textvariable option), the font option is used to specify in what font that text in the label will be displayed.
+---------------------------------------------------------------------------------
+7)cursor:It is used to specify what cursor to show when the mouse is moved over the label. The default is to use the standard cursor.
+---------------------------------------------------------------------------------
+8)textvariable: As the name suggests it is associated with a Tkinter variable (usually a StringVar) with the label. If the variable is changed, the label text is updated.
+---------------------------------------------------------------------------------
+9)bitmap:It is used to set the bitmap to the graphical object specified so that, the label can represent the graphics instead of text.
+---------------------------------------------------------------------------------
+10)fg:The label clior, used for text and bitmap labels. The default is system specific. If you are displaying a bitmap, this is the clior that will appear at the position of the 1-bits in the bitmap.
+---------------------------------------------------------------------------------
+11)image: This option is used to display a static image in the label widget.
+---------------------------------------------------------------------------------
+12)padx:This option is used to add extra spaces between left and right of the text within the label.The default value for this option is 1.
+---------------------------------------------------------------------------------
+13)pady:This option is used to add extra spaces between top and bottom of the text within the label.The default value for this option is 1.
+---------------------------------------------------------------------------------
+14)justify:This option is used to define how to align multiple lines of text. Use LEFT, RIGHT, or CENTER as its values. Note that to position the text inside the widget, use the anchor option. Default value for justify is CENTER.
+---------------------------------------------------------------------------------
+15)relief: This option is used to specify appearance of a decorative border around the label. The default value for this option is FLAT.
+---------------------------------------------------------------------------------
+16)underline:This
+---------------------------------------------------------------------------------
+17)wraplength:Instead of having only one line as the label text it can be broken itno to the number of lines where each line has the number of characters specified to this option.
+---------------------------------------------------------------------------------
