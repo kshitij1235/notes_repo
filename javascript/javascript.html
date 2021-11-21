@@ -1,0 +1,279 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>javascript</title>
+    </head>
+    <body>
+    <h1>JAVASCRIPT CODE</h1>           
+
+<script>
+
+// printing 
+
+console.log("hello world")
+
+// creating a object 
+
+console.log({kshitij : "he is a good boy" 
+	         , kartik : "is a good boy"})
+
+
+// arranging a object in  table 
+
+console.table({kshitij : "he is a good boy" , kartik : "is a good boy"})
+
+// showing an error 
+
+console.error("invalid command")
+
+// showing an warning
+
+console.warn("hello")
+
+
+
+// vaiables -----------------------
+
+
+// variables can be defined as 
+// var , let ,const
+
+// eg-
+
+var name ="kshitij"
+console.log(name)
+
+let name2= "kshitij2"
+console.log(name2)
+
+
+// you cannot change this variable craeted by constant 
+
+const name3 ="kashitij3"
+console.log(name3)
+
+// print all at once 
+
+console.log(name, name2 , name3)
+
+// if you have to created a same variable but give it different values inside brackets
+// (
+// let name ="kartik"
+// console.log(name)
+// )
+
+
+// rules for creating java script vaiables------------------------------------------
+// 1. cannot start with numbers
+// 2. can start with letters , numbers ,$
+// 3. they are case sensetative 
+// ----------------------------------------------------------------------------------
+
+
+/* most commanon programing case----------------------------------------------------
+
+1. cammel case
+2. kabeb case
+3. sname case
+
+*/
+// ------------------------------------------------------------------------
+
+
+// to cheak the type of operator use type of-----------------------------------------------
+
+// Syntax-
+
+// (typeof datatype_variable)
+
+console.log((typeof name3))
+
+// -------------------------------------------------------------------------------
+
+// datatype--------------------------------------------------------------------------------------------------
+
+// String--------------------------
+
+ let job="youtube"
+ console.log(job , (typeof job))
+
+//  numbers-----------------------
+
+let marks=34
+ console.log(marks , (typeof marks))
+
+//  Boolean----------------------------
+
+let ans=true
+ console.log(ans , (typeof ans))
+
+// null--------------------------------
+
+let nullvar= null
+ console.log(nullvar, (typeof nullvar))
+
+//  undefined----------------------------
+
+let undef =undefined
+console.log(undef , (typeof undef))
+
+// Date------------------------------
+
+let date = new Date();
+console.log(date , (typeof date));
+
+
+// object ------------------------------------------------------
+
+console.log("------------OBJECTS------------------------")
+
+let studentmarks = {
+  kshitij:34 ,
+  kartik: 35 ,
+  rohan : 89
+}
+
+console.log("student marks are : " ,studentmarks , (typeof studentmarks))
+
+// ways to accesing Object
+
+console.log(studentmarks.kartik)
+console.log(studentmarks["channel"])
+console.log(studentmarks.channel)
+
+// -------------------------------------------------------------------------------
+
+// functions---------------------------------------------------------------------------------------
+
+ console.log("----------------FUNCTIONS--------------------")
+
+function findname()
+ {
+    
+}
+
+console.log(typeof findname)
+
+// ---------------------------------------------------------------------------------------------
+
+
+// type conversion  and type coercion------------------------------------------------------------------
+
+let myvar= 34 
+myvar= String(myvar)
+console.log(myvar, (typeof myvar));
+
+//    alternate method 
+let int=54;
+console.log(String(int) , (typeof int));
+
+// ------------------------------------------------------------------------------------------
+
+// arrays ------------------------------------------------------------------------
+console.log("-------------------ARRAYS------------------------")
+// syntax
+
+const fruit = ["orange", "apple", "grapes"];
+console.log(fruit , (typeof fruit));
+
+// array property
+console.log(fruit.length);
+
+// modify elements
+
+const array = [1,2,2,3,44];
+array.push(44)  //to add elememt at last
+console.log(array)
+
+array.unshift(99) //add element to last
+console.log(array)
+
+array.pop() //to remove element fro m last
+console.log(array)
+
+array.shift()//remove element from first
+console.log(array)
+
+array.splice(1,2)//skip element when printing   syntax= array.splice(where to start , how much to skip)
+
+array.reverse()//use to reverse the array
+
+console.log(array)
+
+// add 2 arrays 
+
+array.concat(fruit)
+console.log(array)
+
+// array methods
+
+console.log(Array.isArray("orange"));
+
+// add array
+
+fruit[0]="pineapple"
+console.log(fruit)
+
+// to transfer the list
+
+let fruitelements=fruit[0]
+console.log("added elements : " ,fruitelements)
+
+
+// if and else 
+
+console.log("----IF AND ELSE STATEMENT------");
+
+const age = 65;
+const vari = 95 ;
+const donedrive=true
+
+if(age==19){
+    console.log("the age is 19");
+}
+else if(age==65){
+    console.log("the age is 65")
+}
+else{
+    console.log("thre age is not 19");
+}
+
+// if you put  === it compares type and even value
+// if you put  == it compares value 
+
+
+// to cheak weather the variable is present or not 
+
+if(typeof vari !== 'undefined'){
+    console.log("the variable is present")
+}
+else{
+    console.log("vari is not defined")
+}
+
+// if statements with boolean 
+
+console.log("--bolean conditon---")
+
+if(donedrive && age==65){
+//           ^ to add the additionl conditon to it
+    console.log("you can drive with age 65")
+}
+
+if(donedrive){               //if it is true it will select this
+    console.log("you can drive")
+}
+else{     //if fase it will go for else
+    console.log("you cannot drive")
+}
+
+// another way to use if conditions 
+
+console.log(age==65? 'age is 65': 'age is not 65')
+
+</script>
+        
+    </body>
+    </html>
